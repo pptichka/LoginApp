@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         greetingUserLabel.text = "Hello, " + userName + "!"
         
-        view.setTwoGradient(colorOne: UIColor.systemBackground, colorTwo: Colors.lavander)
+        view.setTwoGradient(colorOne: Colors.lavander, colorTwo: Colors.mint)
     }
     
 }
