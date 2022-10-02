@@ -69,15 +69,19 @@
                             <constraint firstItem="Ndw-nE-MVp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nU5-e8-rjk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTF" destination="xIq-9u-Ei7" id="MvC-M4-wBL"/>
+                        <outlet property="userNameTF" destination="kKX-xt-Re6" id="Obo-xt-Na4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1206" y="-89"/>
         </scene>
-        <!--View Controller-->
+        <!--Greeting View Controller-->
         <scene sceneID="r72-s9-8lc">
             <objects>
-                <viewController id="5Lf-9I-o5F" sceneMemberID="viewController">
+                <viewController id="5Lf-9I-o5F" customClass="GreetingViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P56-7A-WY4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,6 +106,9 @@
                                 <rect key="frame" x="119" y="362" width="82" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out"/>
+                                <connections>
+                                    <action selector="logOutButtonDidTapped" destination="5Lf-9I-o5F" eventType="touchUpInside" id="LE7-5k-jMg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FGm-VT-9x2"/>
@@ -113,6 +120,9 @@
                             <constraint firstItem="vVk-Y5-jl3" firstAttribute="top" secondItem="FGm-VT-9x2" secondAttribute="top" constant="150" id="jLi-gk-LIv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingUserLabel" destination="kbw-sT-yht" id="twe-ZI-3xY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnZ-6q-VZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
