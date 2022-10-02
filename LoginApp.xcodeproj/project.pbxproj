@@ -14,6 +14,8 @@
 		8B31E6F728E997F5005B36B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B31E6F528E997F5005B36B2 /* Main.storyboard */; };
 		8B31E6F928E997F6005B36B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B31E6F828E997F6005B36B2 /* Assets.xcassets */; };
 		8B31E6FC28E997F6005B36B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B31E6FA28E997F6005B36B2 /* LaunchScreen.storyboard */; };
+		8BC3B65428E9F4D8002EA220 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC3B65328E9F4D8002EA220 /* Gradients.swift */; };
+		8BC3B65628E9F515002EA220 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC3B65528E9F515002EA220 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8B31E6F828E997F6005B36B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B31E6FB28E997F6005B36B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B31E6FD28E997F6005B36B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BC3B65328E9F4D8002EA220 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
+		8BC3B65528E9F515002EA220 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				8B31E6F828E997F6005B36B2 /* Assets.xcassets */,
 				8B31E6FA28E997F6005B36B2 /* LaunchScreen.storyboard */,
 				8B31E6FD28E997F6005B36B2 /* Info.plist */,
+				8BC3B65328E9F4D8002EA220 /* Gradients.swift */,
+				8BC3B65528E9F515002EA220 /* Colors.swift */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B31E6F428E997F5005B36B2 /* LoginViewController.swift in Sources */,
+				8BC3B65628E9F515002EA220 /* Colors.swift in Sources */,
+				8BC3B65428E9F4D8002EA220 /* Gradients.swift in Sources */,
 				8B31E6F028E997F5005B36B2 /* AppDelegate.swift in Sources */,
 				8B31E6F228E997F5005B36B2 /* SceneDelegate.swift in Sources */,
 				8B2C6BCB28E9C44000134D0D /* WelcomeViewController.swift in Sources */,

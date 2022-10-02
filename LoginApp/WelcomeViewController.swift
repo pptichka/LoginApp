@@ -16,6 +16,8 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         greetingUserLabel.text = "Hello, " + userName + "!"
+        
+        view.setTwoGradient(colorOne: UIColor.systemBackground, colorTwo: Colors.lavander)
     }
     
 }
