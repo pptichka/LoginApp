@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     
     @IBOutlet var userNameTF: UITextField!
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let greetingVC = segue.destination as? GreetingViewController else { return }
+        guard let greetingVC = segue.destination as? WelcomeViewController else { return }
         greetingVC.userName = userNameTF.text
     }
 
