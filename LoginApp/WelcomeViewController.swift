@@ -18,7 +18,4 @@ class WelcomeViewController: UIViewController {
         greetingUserLabel.text = "Hello, " + userName + "!"
     }
     
-    @IBAction func logOutButtonDidTapped() {
-        
-    }
 }

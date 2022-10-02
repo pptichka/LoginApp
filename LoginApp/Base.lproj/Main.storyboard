@@ -107,7 +107,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out"/>
                                 <connections>
-                                    <action selector="logOutButtonDidTapped" destination="5Lf-9I-o5F" eventType="touchUpInside" id="PK3-jI-tkE"/>
+                                    <segue destination="gsq-as-z8a" kind="unwind" unwindAction="unwindToStart:" id="sVg-QP-1AB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,6 +125,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnZ-6q-VZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="gsq-as-z8a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-440.625" y="-90.845070422535215"/>
         </scene>
