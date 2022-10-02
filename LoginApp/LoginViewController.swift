@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         guard let greetingVC = segue.destination as? WelcomeViewController else { return }
         greetingVC.userName = userNameTF.text
         
-        showAlert()
+        checkDatValidtion()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,6 +44,13 @@ class LoginViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Try again", style: .cancel))
         
         present(alert, animated: true)
+    }
+    
+    private func checkDatValidtion() {
+        if userNameTF.text != correctUserName || passwordTF.text != correctPassword {
+            showAlert()
+            passwordTF.text = emptyText
+        }
     }
    
     
