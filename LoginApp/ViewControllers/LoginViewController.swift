@@ -16,23 +16,41 @@ class LoginViewController: UIViewController {
     
     // MARK: Data
     
-    let correctUserName = "user"
-    let correctPassword = "password"
-    let emptyText = ""
+    private let correctUserName = "user"
+    private let correctPassword = "password"
     
     // MARK: Methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let greetingVC = segue.destination as? WelcomeViewController else { return }
-        greetingVC.userName = userNameTF.text
         
-        checkDatValidtion()
+        greetingVC.userName = correctUserName
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
+    
+    // MARK: IBActions
+    
+    @IBAction func unwindToStart(_ sender: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
+    }
+    
+    @IBAction func userNameShowHelp() {
+        let alert = UIAlertController(
+            title: "Help",
+            message: "Username is \(correctUserName)",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        
+        present(alert, animated: true)
+    }
+    
+    // MARK: Public Methods
     
     private func showAlert() {
         let alert = UIAlertController(
@@ -48,37 +66,8 @@ class LoginViewController: UIViewController {
     private func checkDatValidtion() {
         if userNameTF.text != correctUserName || passwordTF.text != correctPassword {
             showAlert()
-            passwordTF.text = emptyText
+            passwordTF.text = ""
         }
-    }
-    
-    // MARK: IBActions
-    
-    @IBAction func unwindToStart(_ sender: UIStoryboardSegue) {
-        userNameTF.text = emptyText
-        passwordTF.text = emptyText
-    }
-    
-    @IBAction func userNameShowHelp() {
-        let alert = UIAlertController(
-            title: "Help",
-            message: "Username is \(correctUserName)",
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        
-        present(alert, animated: true)
-    }
-    
-    @IBAction func passwordShowHelp() {
-        let alert = UIAlertController(
-            title: "Help",
-            message: "Password is \(correctPassword).",
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        
-        present(alert, animated: true)
     }
     
 }
