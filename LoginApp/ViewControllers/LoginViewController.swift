@@ -14,12 +14,19 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    @IBOutlet var logInButton: UIButton!
+    
+    
     // MARK: Data
     
     private let correctUserName = "user"
     private let correctPassword = "password"
     
     // MARK: Methods
+    
+    override func viewDidLoad() {
+        logInButton.layer.cornerRadius = 15
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let greetingVC = segue.destination as? WelcomeViewController else { return }
@@ -39,35 +46,39 @@ class LoginViewController: UIViewController {
         passwordTF.text = ""
     }
     
-    @IBAction func userNameShowHelp() {
-        let alert = UIAlertController(
-            title: "Help",
-            message: "Username is \(correctUserName)",
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        
-        present(alert, animated: true)
+    @IBAction func logInPressed() {
+        guard userNameTF.text == correctUserName, passwordTF.text == correctPassword else {
+            showAlert(
+                title: "Error",
+                message: "Incorrect UserName or Password.",
+                textField: passwordTF
+            )
+            return
+        }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+    }
+    
+    
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Help", message: "Your UserName is \(correctUserName).")
+        : showAlert(title: "Help", message: "Your Password is \(correctPassword).")
     }
     
     // MARK: Public Methods
     
-    private func showAlert() {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(
-            title: "Login Error!",
-            message: "Username or Password not found.",
+            title: title,
+            message: message,
             preferredStyle: .alert
         )
-        alert.addAction(UIAlertAction(title: "Try again", style: .cancel))
-        
-        present(alert, animated: true)
-    }
-    
-    private func checkDatValidtion() {
-        if userNameTF.text != correctUserName || passwordTF.text != correctPassword {
-            showAlert()
-            passwordTF.text = ""
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
         }
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
     
 }
