@@ -9,10 +9,15 @@ import UIKit
 
 class AboutMyHomeViewController: UIViewController {
 
+    @IBOutlet var homeLabel: UILabel!
+    @IBOutlet var textButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
 
+    @IBAction func buttonDidTapped() {
+    }
 }

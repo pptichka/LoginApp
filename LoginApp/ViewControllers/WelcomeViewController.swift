@@ -29,9 +29,31 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingUserLabel.text = "Hello, " + userName + "!"
+        greetingUserLabel.text = "Hello, " + "" + "!"
         
         view.addVerticalGradientLayer(topColor: firstColor, buttomColor: secondColor)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tapBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tapBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let navigationCV = viewController as? UINavigationController {
+                guard let aboutMyselfVC = navigationCV.topViewController as? AboutMyselfViewController else { return }
+                aboutMyselfVC.view.addVerticalGradientLayer(topColor: firstColor, buttomColor: secondColor)
+            } else if let aboutMyHomeVC = viewController as? AboutMyHomeViewController {
+                aboutMyHomeVC.view.addVerticalGradientLayer(
+                    topColor: firstColor,
+                    buttomColor: secondColor
+                )
+            } else if let aboutMyLife = viewController as? AboutMyLifeViewController {
+                aboutMyLife.view.addVerticalGradientLayer(
+                    topColor: firstColor,
+                    buttomColor: secondColor
+                )
+            }
+        }
     }
     
 }
@@ -45,4 +67,5 @@ class WelcomeViewController: UIViewController {
             gradient.endPoint = CGPoint(x: 0, y: 1)
             layer.insertSublayer(gradient, at: 0)
         }
+        
     }

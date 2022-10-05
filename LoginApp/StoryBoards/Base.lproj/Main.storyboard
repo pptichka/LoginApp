@@ -123,6 +123,13 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Y7-Sz-0El">
+                                <rect key="frame" x="122" y="483.5" width="76.5" height="34.5"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                <connections>
+                                    <segue destination="yR9-WC-BEG" kind="unwind" unwindAction="unwindToStart:" id="87D-3r-WI8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ijs-Hh-LNo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -130,9 +137,12 @@
                             <constraint firstItem="K81-bk-sRm" firstAttribute="top" secondItem="Ijs-Hh-LNo" secondAttribute="top" id="Cyk-ff-Eqy"/>
                             <constraint firstItem="4Rd-Me-IbC" firstAttribute="top" secondItem="K81-bk-sRm" secondAttribute="bottom" constant="30" id="OIE-px-8n4"/>
                             <constraint firstItem="K81-bk-sRm" firstAttribute="centerX" secondItem="4UN-Xr-gf6" secondAttribute="centerX" id="V7S-Kr-E45"/>
+                            <constraint firstItem="2Y7-Sz-0El" firstAttribute="centerX" secondItem="4UN-Xr-gf6" secondAttribute="centerX" id="WnM-Zt-uLp"/>
+                            <constraint firstAttribute="bottom" secondItem="2Y7-Sz-0El" secondAttribute="bottom" constant="50" id="hmG-XI-AIQ"/>
                             <constraint firstItem="4Rd-Me-IbC" firstAttribute="centerX" secondItem="4UN-Xr-gf6" secondAttribute="centerX" id="siR-GO-obf"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="FWs-11-Vxy">
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="ncv-J2-8W8">
                             <connections>
@@ -140,10 +150,16 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="lrd-Or-HyW" id="ulc-CJ-yF9"/>
+                        <outlet property="nameLAbel" destination="eI8-of-Buz" id="dzi-BT-3RA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRO-4P-mmm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="yR9-WC-BEG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1290" y="2294.3661971830984"/>
+            <point key="canvasLocation" x="-1290" y="2310"/>
         </scene>
         <!--Bio View Controller-->
         <scene sceneID="QUG-lg-yca">
@@ -162,13 +178,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09h-2q-EkA">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09h-2q-EkA">
                                         <rect key="frame" x="0.0" y="40.5" width="280" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET2-EK-zOS">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET2-EK-zOS">
                                         <rect key="frame" x="0.0" y="81" width="280" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -186,6 +202,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mkh-VE-Uue"/>
+                    <connections>
+                        <outlet property="firstBioLabel" destination="B67-Ol-UDa" id="tvC-Tm-Bnn"/>
+                        <outlet property="secondBioLabel" destination="09h-2q-EkA" id="HaJ-yB-6gh"/>
+                        <outlet property="thirdBioLabel" destination="ET2-EK-zOS" id="eca-fb-J3s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRX-Lv-Idi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,6 +242,9 @@
                                 <rect key="frame" x="122.5" y="266.5" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buttonDidTapped" destination="isM-D1-rfm" eventType="touchUpInside" id="jR4-e6-dfw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8cu-VR-U2Y"/>
@@ -239,6 +263,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My home" image="house" catalog="system" selectedImage="house" id="Dt0-fB-V9G"/>
+                    <connections>
+                        <outlet property="homeLabel" destination="Bva-b4-RQB" id="gEH-g9-U9o"/>
+                        <outlet property="textButton" destination="sVa-o0-PCK" id="wMi-HW-U67"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P88-Uc-66j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,19 +289,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVd-zZ-YRB">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVd-zZ-YRB">
                                         <rect key="frame" x="0.0" y="40.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8B-Qt-Asb">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8B-Qt-Asb">
                                         <rect key="frame" x="0.0" y="81" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l81-Pz-XtK">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l81-Pz-XtK">
                                         <rect key="frame" x="0.0" y="121.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -291,6 +319,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My life" image="face.smiling" catalog="system" selectedImage="face.smiling" id="6F1-w9-t4H"/>
+                    <connections>
+                        <outlet property="firstLabel" destination="vXc-hA-7dX" id="fAR-dL-2gJ"/>
+                        <outlet property="fourthLAbel" destination="l81-Pz-XtK" id="qlw-GH-imr"/>
+                        <outlet property="secondLabel" destination="PVd-zZ-YRB" id="R1e-pb-sn5"/>
+                        <outlet property="thirdLabel" destination="r8B-Qt-Asb" id="ize-Kh-yVd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kS9-uK-Twm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -353,6 +387,7 @@
                             <constraint firstItem="oLW-0r-nqR" firstAttribute="centerX" secondItem="P56-7A-WY4" secondAttribute="centerX" id="jgD-Lu-hFU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="pfj-ez-bMk"/>
                     <connections>
                         <outlet property="greetingUserLabel" destination="kbw-sT-yht" id="x0n-q6-gZw"/>
                     </connections>

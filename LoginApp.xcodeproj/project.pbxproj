@@ -18,6 +18,7 @@
 		8BFAF5C828ED9B2300CA0C80 /* AboutMyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFAF5C728ED9B2300CA0C80 /* AboutMyHomeViewController.swift */; };
 		8BFAF5CA28ED9B3D00CA0C80 /* AboutMyLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFAF5C928ED9B3D00CA0C80 /* AboutMyLifeViewController.swift */; };
 		8BFAF5CC28EDA27800CA0C80 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFAF5CB28EDA27800CA0C80 /* BioViewController.swift */; };
+		8BFAF5CE28EDAEAC00CA0C80 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFAF5CD28EDAEAC00CA0C80 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8BFAF5C728ED9B2300CA0C80 /* AboutMyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMyHomeViewController.swift; sourceTree = "<group>"; };
 		8BFAF5C928ED9B3D00CA0C80 /* AboutMyLifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMyLifeViewController.swift; sourceTree = "<group>"; };
 		8BFAF5CB28EDA27800CA0C80 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		8BFAF5CD28EDAEAC00CA0C80 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserData.swift; path = LoginApp/ViewControllers/UserData.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		8BC3B65C28EC5F67002EA220 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8BFAF5CD28EDAEAC00CA0C80 /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				8BFAF5CA28ED9B3D00CA0C80 /* AboutMyLifeViewController.swift in Sources */,
 				8B31E6F428E997F5005B36B2 /* LoginViewController.swift in Sources */,
 				8B31E6F028E997F5005B36B2 /* AppDelegate.swift in Sources */,
+				8BFAF5CE28EDAEAC00CA0C80 /* UserData.swift in Sources */,
 				8BFAF5CC28EDA27800CA0C80 /* BioViewController.swift in Sources */,
 				8BFAF5C628ED9AF800CA0C80 /* AboutMyselfViewController.swift in Sources */,
 				8B31E6F228E997F5005B36B2 /* SceneDelegate.swift in Sources */,
