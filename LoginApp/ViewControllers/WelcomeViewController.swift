@@ -11,6 +11,8 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var greetingUserLabel: UILabel!
     
+    private let user = User(information: .getPerson())
+        
     var userName: String!
     
     private let firstColor = UIColor(
@@ -29,8 +31,8 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingUserLabel.text = "Hello, " + "" + "!"
         
+        greetingUserLabel.text = "Hello, " + user.information.name + "!"
         view.addVerticalGradientLayer(topColor: firstColor, buttomColor: secondColor)
     }
     
