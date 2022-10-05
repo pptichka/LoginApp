@@ -23,9 +23,9 @@ class WelcomeViewController: UIViewController {
     )
     
     private let secondColor = UIColor(
-        red: 173.0 / 255.0,
-        green: 239.0 / 235.0,
-        blue: 223.0 / 255.0,
+        red: 130.0 / 255.0,
+        green: 207.0 / 235.0,
+        blue: 252.0 / 255.0,
         alpha: 1.0
     )
     
@@ -33,7 +33,10 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         greetingUserLabel.text = "Hello, " + user.information.name + "!"
-        view.addVerticalGradientLayer(topColor: firstColor, buttomColor: secondColor)
+        view.addVerticalGradientLayer(
+            topColor: secondColor,
+            buttomColor: firstColor
+        )
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,16 +46,19 @@ class WelcomeViewController: UIViewController {
         viewControllers.forEach { viewController in
             if let navigationCV = viewController as? UINavigationController {
                 guard let aboutMyselfVC = navigationCV.topViewController as? AboutMyselfViewController else { return }
-                aboutMyselfVC.view.addVerticalGradientLayer(topColor: firstColor, buttomColor: secondColor)
+                aboutMyselfVC.view.addVerticalGradientLayer(
+                    topColor: secondColor,
+                    buttomColor: firstColor
+                )
             } else if let aboutMyHomeVC = viewController as? AboutMyHomeViewController {
                 aboutMyHomeVC.view.addVerticalGradientLayer(
-                    topColor: firstColor,
-                    buttomColor: secondColor
+                    topColor: secondColor,
+                    buttomColor: firstColor
                 )
             } else if let aboutMyLife = viewController as? AboutMyLifeViewController {
                 aboutMyLife.view.addVerticalGradientLayer(
-                    topColor: firstColor,
-                    buttomColor: secondColor
+                    topColor: secondColor,
+                    buttomColor: firstColor
                 )
             }
         }

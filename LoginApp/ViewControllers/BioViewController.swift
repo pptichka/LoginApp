@@ -22,9 +22,9 @@ class BioViewController: UIViewController {
     )
     
     private let secondColor = UIColor(
-        red: 173.0 / 255.0,
-        green: 239.0 / 235.0,
-        blue: 223.0 / 255.0,
+        red: 130.0 / 255.0,
+        green: 207.0 / 235.0,
+        blue: 252.0 / 255.0,
         alpha: 1.0
     )
     
@@ -35,7 +35,10 @@ class BioViewController: UIViewController {
         secondBioLabel.text = user.information.workInfo
         thirdBioLabel.text = user.information.dreamInfo
         
-        view.addVerticalGradientLayer(topColor: firstColor, buttomColor: secondColor)
+        view.addVerticalGradientLayer(
+            topColor: secondColor,
+            buttomColor: firstColor
+        )
     }
 
 }
