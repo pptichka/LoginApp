@@ -14,8 +14,6 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    @IBOutlet var logInButton: UIButton!
-    
     
     // MARK: Data
     
@@ -23,10 +21,6 @@ class LoginViewController: UIViewController {
     private let correctPassword = "password"
     
     // MARK: Methods
-    
-    override func viewDidLoad() {
-        logInButton.layer.cornerRadius = 15
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let greetingVC = segue.destination as? WelcomeViewController else { return }
