@@ -13,10 +13,10 @@ class AboutMyHomeViewController: UIViewController {
     @IBOutlet var catView: UIImageView!
     @IBOutlet var answerButton: UIButton!
     
-    private let info = User(information: .getPerson())
+    private let user = User(information: .getPerson())
     
     override func viewDidLoad() {
-        homeLabel.text = info.information.catInfo
+        homeLabel.text = user.information.catInfo
     }
     
     @IBAction func buttonDidTapped() {

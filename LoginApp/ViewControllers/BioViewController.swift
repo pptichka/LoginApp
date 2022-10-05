@@ -12,9 +12,14 @@ class BioViewController: UIViewController {
     @IBOutlet var secondBioLabel: UILabel!
     @IBOutlet var thirdBioLabel: UILabel!
     
+    private let user = User(information: .getPerson())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        firstBioLabel.text = user.information.mainInfo
+        secondBioLabel.text = user.information.workInfo
+        thirdBioLabel.text = user.information.dreamInfo
     }
 
 }

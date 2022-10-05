@@ -282,7 +282,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jDd-rg-2DP">
-                                <rect key="frame" x="20" y="65" width="280" height="142"/>
+                                <rect key="frame" x="20" y="40" width="280" height="142"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXc-hA-7dX">
                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
@@ -316,7 +316,7 @@
                         <constraints>
                             <constraint firstItem="jDd-rg-2DP" firstAttribute="leading" secondItem="ce2-EU-kaA" secondAttribute="leading" constant="20" id="D8l-BO-bx2"/>
                             <constraint firstItem="ce2-EU-kaA" firstAttribute="trailing" secondItem="jDd-rg-2DP" secondAttribute="trailing" constant="20" id="UrR-Kb-OdA"/>
-                            <constraint firstItem="jDd-rg-2DP" firstAttribute="top" secondItem="ce2-EU-kaA" secondAttribute="top" constant="65" id="rp0-NZ-fgq"/>
+                            <constraint firstItem="jDd-rg-2DP" firstAttribute="top" secondItem="ce2-EU-kaA" secondAttribute="top" constant="40" id="rp0-NZ-fgq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My life" image="face.smiling" catalog="system" selectedImage="face.smiling" id="6F1-w9-t4H"/>
