@@ -12,13 +12,12 @@ class AboutMyselfViewController: UIViewController {
     @IBOutlet var nameLAbel: UILabel!
     @IBOutlet var infoLabel: UILabel!
     
-    
+    private let info = User(information: .getPerson())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        nameLAbel.text = info.information.name
+        infoLabel.text = info.information.post
     }
-   
-
 }

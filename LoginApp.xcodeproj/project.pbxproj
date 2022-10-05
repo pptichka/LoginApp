@@ -93,9 +93,9 @@
 				8B31E6F328E997F5005B36B2 /* LoginViewController.swift */,
 				8B2C6BCA28E9C44000134D0D /* WelcomeViewController.swift */,
 				8BFAF5C528ED9AF800CA0C80 /* AboutMyselfViewController.swift */,
+				8BFAF5CB28EDA27800CA0C80 /* BioViewController.swift */,
 				8BFAF5C728ED9B2300CA0C80 /* AboutMyHomeViewController.swift */,
 				8BFAF5C928ED9B3D00CA0C80 /* AboutMyLifeViewController.swift */,
-				8BFAF5CB28EDA27800CA0C80 /* BioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
