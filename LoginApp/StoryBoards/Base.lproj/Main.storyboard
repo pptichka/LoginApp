@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +23,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndw-nE-MVp">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="34.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Log in"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Log in" cornerStyle="large"/>
                                         <connections>
                                             <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBP-IA-J41"/>
                                         </connections>
@@ -84,7 +83,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logInButton" destination="Ndw-nE-MVp" id="MJa-ed-7yn"/>
                         <outlet property="passwordTF" destination="xIq-9u-Ei7" id="D4P-e2-FAK"/>
                         <outlet property="userNameTF" destination="kKX-xt-Re6" id="yZd-4i-IGJ"/>
                         <segue destination="5Lf-9I-o5F" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="XJZ-xD-DTE"/>
@@ -93,6 +91,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1206" y="-89"/>
+        </scene>
+        <!--Me-->
+        <scene sceneID="mv5-0M-m2B">
+            <objects>
+                <viewController id="OUo-yd-HRB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4UN-Xr-gf6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ijs-Hh-LNo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Me" image="heart" catalog="system" selectedImage="suit.heart" id="X4t-F2-DFB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bRO-4P-mmm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1290" y="1519"/>
+        </scene>
+        <!--My home-->
+        <scene sceneID="Y1n-BB-hP2">
+            <objects>
+                <viewController id="isM-D1-rfm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n2E-gk-ug4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8cu-VR-U2Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My home" image="house" catalog="system" selectedImage="house" id="Dt0-fB-V9G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P88-Uc-66j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-443" y="1518"/>
+        </scene>
+        <!--My life-->
+        <scene sceneID="azn-o6-fgV">
+            <objects>
+                <viewController id="4Ye-li-M0d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aUx-qC-Wik">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ce2-EU-kaA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My life" image="face.smiling" catalog="system" selectedImage="face.smiling" id="6F1-w9-t4H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kS9-uK-Twm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405" y="1518"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="r72-s9-8lc">
@@ -119,25 +165,36 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efn-ba-KQr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efn-ba-KQr">
                                 <rect key="frame" x="115" y="400" width="90.5" height="38"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Log out">
+                                <buttonConfiguration key="configuration" style="filled" title="Log out" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
-                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="gsq-as-z8a" kind="unwind" unwindAction="unwindToStart:" id="sVg-QP-1AB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLW-0r-nqR">
+                                <rect key="frame" x="110.5" y="463" width="99" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Show more"/>
+                                <connections>
+                                    <segue destination="GVX-ab-5YO" kind="presentation" id="Ch2-kL-NcE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FGm-VT-9x2"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
+                            <constraint firstItem="oLW-0r-nqR" firstAttribute="top" secondItem="efn-ba-KQr" secondAttribute="bottom" constant="25" id="9gU-jJ-R1r"/>
                             <constraint firstItem="efn-ba-KQr" firstAttribute="centerX" secondItem="P56-7A-WY4" secondAttribute="centerX" id="Qcv-2C-R2f"/>
                             <constraint firstItem="vVk-Y5-jl3" firstAttribute="centerX" secondItem="P56-7A-WY4" secondAttribute="centerX" id="UgY-zL-OMR"/>
                             <constraint firstItem="efn-ba-KQr" firstAttribute="top" secondItem="vVk-Y5-jl3" secondAttribute="bottom" constant="106" id="dBS-Q1-5tH"/>
                             <constraint firstItem="vVk-Y5-jl3" firstAttribute="top" secondItem="FGm-VT-9x2" secondAttribute="top" constant="150" id="jLi-gk-LIv"/>
+                            <constraint firstItem="oLW-0r-nqR" firstAttribute="centerX" secondItem="P56-7A-WY4" secondAttribute="centerX" id="jgD-Lu-hFU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -149,16 +206,39 @@
             </objects>
             <point key="canvasLocation" x="-440.625" y="-90.845070422535215"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="42G-t3-PNA">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="GVX-ab-5YO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CIL-4C-DJZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OUo-yd-HRB" kind="relationship" relationship="viewControllers" id="ihJ-HA-Wnz"/>
+                        <segue destination="isM-D1-rfm" kind="relationship" relationship="viewControllers" id="APG-ss-ncA"/>
+                        <segue destination="4Ye-li-M0d" kind="relationship" relationship="viewControllers" id="V7Y-0Z-vXQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMM-Ud-H9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-441" y="715"/>
+        </scene>
     </scenes>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="face.smiling" catalog="system" width="128" height="123"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="suit.heart" catalog="system" width="128" height="107"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
