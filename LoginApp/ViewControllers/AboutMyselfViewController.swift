@@ -12,9 +12,12 @@ class AboutMyselfViewController: UIViewController {
     @IBOutlet var nameLAbel: UILabel!
     @IBOutlet var infoLabel: UILabel!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
     }
    
 

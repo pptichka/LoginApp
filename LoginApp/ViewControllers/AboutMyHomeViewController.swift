@@ -8,16 +8,35 @@
 import UIKit
 
 class AboutMyHomeViewController: UIViewController {
-
+    
     @IBOutlet var homeLabel: UILabel!
-    @IBOutlet var textButton: UIButton!
+    @IBOutlet var catView: UIImageView!
+    @IBOutlet var answerButton: UIButton!
+    
+    private let info = User(information: .getPerson())
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
+        homeLabel.text = info.information.catInfo
     }
     
-
     @IBAction func buttonDidTapped() {
+        showAlert(title: "Вот это да!", message: "Завести второго кота 😉")
+        
     }
+    
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.catView.isHidden = false
+            self.answerButton.isHidden = true
+        }
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
 }
