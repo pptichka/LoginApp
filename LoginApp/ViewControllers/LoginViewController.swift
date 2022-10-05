@@ -17,21 +17,19 @@ class LoginViewController: UIViewController {
     
     // MARK: Data
     
-    private let correctUserName = "user"
-    private let correctPassword = "password"
-    
+    private let user = User(information: .getPerson())
     
     // MARK: Methods
     
     override func viewDidLoad() {
-        userNameTF.text = correctUserName
-        passwordTF.text = correctPassword
+        userNameTF.text = user.login
+        passwordTF.text = user.password
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let greetingVC = segue.destination as? WelcomeViewController else { return }
         
-        greetingVC.userName = correctUserName
+        greetingVC.userName = user.login
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -46,7 +44,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInPressed() {
-        guard userNameTF.text == correctUserName, passwordTF.text == correctPassword else {
+        guard userNameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 title: "Error",
                 message: "Incorrect UserName or Password.",
@@ -60,8 +58,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Help", message: "Your UserName is \(correctUserName).")
-        : showAlert(title: "Help", message: "Your Password is \(correctPassword).")
+        ? showAlert(title: "Help", message: "Your UserName is \(user.login).")
+        : showAlert(title: "Help", message: "Your Password is \(user.password).")
     }
     
     // MARK: Public Methods
