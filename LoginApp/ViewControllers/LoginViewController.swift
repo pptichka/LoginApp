@@ -42,8 +42,7 @@ class LoginViewController: UIViewController {
     // MARK: IBActions
     
     @IBAction func unwindToStart(_ sender: UIStoryboardSegue) {
-        userNameTF.text = ""
-        passwordTF.text = ""
+        
     }
     
     @IBAction func logInPressed() {

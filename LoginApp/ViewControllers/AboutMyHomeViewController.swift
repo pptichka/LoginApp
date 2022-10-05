@@ -20,7 +20,7 @@ class AboutMyHomeViewController: UIViewController {
     }
     
     @IBAction func buttonDidTapped() {
-        showAlert(title: "Вот это да!", message: "Завести второго кота 😉")
+        showAlert(title: "Ну конечно!", message: "Завести второго кота 😉")
         
     }
     
